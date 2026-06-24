@@ -2,17 +2,12 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Poured Memories, LLC - Bartending Services</title>
+        <title>Poured Memories, LLC</title>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
             :root {
                 --color1: #AD8330;
                 --color2: #3E3D3D;
-                --color3: #E7CBBC;
-            }
-
-            .accent {
-                color: var(--color1)
             }
             
             body {
@@ -20,93 +15,58 @@
                 padding: 0;
                 font-family: "italiana", system-ui;
                 font-weight: bold;
-                background: white;
-                color: var(--color1);
             }
             
             .hero {
+                background-image: linear-gradient(rgba(230, 100, 0, 0.15)), url('https://images.squarespace-cdn.com/content/v1/6698834996b6057e16d61abc/1732769468439-3O5M6IFOBUPM75V6KXXK/unsplash-image-tFE-p8-kdwU.jpg');
+                max-width: 100%;
+                height: 100vh;
                 background-size: cover;
-                background-position: 38% center;
+                background-position:right 0px center;
                 background-repeat: no-repeat;
                 display: flex;
             }
 
             .content {
                 position: absolute;
-                display: flex;
-                width: 100%;
-                height: 100%;
-                justify-content: center;
-                align-items: center;
+                margin: auto 30px;
+                bottom: 140px;
+                text-align: right;
+                max-width: 450px;
+                right: 0px;
             }
 
             .content h2 {
-                color: white;
-                font-size: 48pt;
-            }
-
-            h2 {
+                color: var(--color2);
                 font-size: 32pt;
+                margin: 10px auto;
+                line-height: 0.9;
             }
 
-            h3 {
-                font-size: 18pt;
+            .content h3 {
+                color: white;
                 margin: 10px auto;
             }
 
-            form {
-                margin: auto 30px;
-                max-width: 350px;
-            }
-
-            input, textarea {
-                border-radius: 20px;
-                border-color: var(--color1);
-                font-size: 16pt;
-                padding: 5px;
-            }
-
-            .group {
-                display: flex;
-                flex-direction: column-reverse;
-                margin: auto 10px;
-            }
-
-            .group button {
-                width: 100px;
-                height: 50px;
-                margin: 30px 0px;
+            .content button {
                 background: none;
-                color: var(--color1);
-                border-radius: 10px;
-                border-color: var(--color1);
-            }
-
-            .name input {
-                max-width: 140px;
-            }
-
-            .name {
-                display: flex;
-                width: 100%;
-                justify-content: space-between;
+                border: white solid 1px;
+                border-radius: 5px;
+                color: white;
+                font-size: 12pt;
             }
 
             .footer {
-                background: white;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: 30px auto;
             }
 
             .footer p {
                 margin: 0px auto;
                 font-size: 10pt;
                 color: var(--color1);
-            }
-
-            .foot-wrapper {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                padding: 30px;
             }
 
             .navi {
@@ -123,12 +83,12 @@
             }
 
             .navi label {
-                filter: invert(0);
+                filter: invert(1);
                 z-index: 1000;
             }
 
             .navi input:checked ~ label {
-                filter: invert(1);
+                filter: invert(0);
             }
 
             .navi input:checked ~ .mobile-droplist {
@@ -141,14 +101,14 @@
             
             .navi h1 {
                 margin: 0px;
-                color: var(--color1);
+                color: white;
                 font-size: 16pt;
                 z-index: 1000;
             }
 
             .mobile-droplist {
                 position: absolute;
-                background: var(--color3); 
+                background: #E7CBBC; 
                 height: 100vh;
                 width: 100vw;
                 display: none;
@@ -174,34 +134,7 @@
                 text-decoration: none;
             }
 
-            .wrapper {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                max-width: 400px;
-                margin: auto 30px;
-            }
-
-            .wrapper img {
-                width: 100%;
-                margin: 15px auto;
-                border-radius: 30px;
-            }
-
             @media (min-width: 800px) {
-                .core {
-                    display: flex;
-                    width: 100%;
-
-                    justify-content: center;
-                }
-                
-                .footer {
-                    position: absolute;
-                    bottom: 0;
-                    width: 100%;
-                }
                 .navi {
                     flex-direction: row;
                     align-items: center;
@@ -237,18 +170,15 @@
                     font-size: 16pt;
                 }
 
-                .wrapper {
-                    flex-direction: column;
-                    justify-content: center;
-                    max-width: none;
+                .content h2 {
+                    font-size: 40pt;
                 }
-    
-                .wrapper img {
-                    max-height: 200px;
-                    width: auto;
-                    border-radius: 30px;
-                }
+            }
 
+            @media (min-width: 1400px) {
+                .content {
+                    margin-right: 200px;
+                }
             }
         </style>
     </head>
@@ -262,61 +192,24 @@
                 <h1>POURED MEMORIES</h1>
                 <div class="mobile-droplist">
                     <ul>
-                        <li><a href="/">Home</a></li>
+                        <li><a href="/" style="text-decoration: underline;"">Home</a></li>
                         <li><a href="/about/">About</a></li>
                         <li><a href="/services/">Services</a></li>
-                        <li><a href="/contact/" style="text-decoration: underline;"">Contact</a></li>
+                        <li><a href="/contact/">Contact</a></li>
                         <li><a href="/gallery/">Gallery</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="core">
-            <div class="wrapper">
-                <h2>CONTACT US</h2>
-                <h3>DON'T SEE WHAT YOU'RE LOOKING FOR?</h3>
-                <h3>NO WORRIES!</h3>
-                <h3>LET'S WORK ON IT TOGETHER!</h3>
+            <div class="content">
+                <h2>ADD A TOUCH OF <i>LUXURY</i> TO YOUR EVENT</h2>
+                <h3><i>WE pour the drinks, YOU make the memories</i></h3>
+                <a href=""/contact/><button>Contact Us!</button></a>
             </div>
-            <form>
-                <p style="padding-left: 10px;">Name</p>
-                <div class="name">
-                    <div class="group">
-                        <input id="first-name" type="text" required/>
-                        <label for"first-name">First Name (required)</label>
-                    </div>
-                    <div class="group">
-                        <input id="last-name" type="text" required/>
-                        <label for"last-name">Last Name (required)</label>
-                    </div>
-                </div>
-                <div class="group">
-                    <input id="mail" type="email" required/>
-                    <label for"mail">Email (required)</label>
-                </div>
-                <div class="group">
-                    <input type="tel" id="phone" name="phone" class="glass"  pattern="^\+?[0-9\s\-\(\)]{7,16}$" required/>
-                    <label for"phone">Phone Number (required)</label>
-                </div>
-                <div class="group">
-                    <input id="num" type="num" />
-                    <label for"num">Number of Guests</label>
-                </div>
-                <p style="padding-left: 10px;">Message (required)</p>
-                <div class="group">
-    		      <textarea class="glass" id="comments" name="comments" row="5" column="33" style="padding: 30px"></textarea>
-                </div>
-                <div class="group">
-                    <a href=""/contact/><button>Send</button></a>
-                </div>
-            </form>
         </div>
         <div class="footer">
-            <div class="foot-wrapper">
-                <p>LA | OC | SGV | SFV </p>
-                <p>pouredmemories@gmail.com</p>
-                <p>626.628.4881</p>
-            </div>
+            <p>LA | OC | SGV | SFV </p>
+            <p>pouredmemories@gmail.com</p>
+            <p>626.628.4881</p>
         </div>
     </body>
 </html>
