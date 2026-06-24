@@ -2,13 +2,12 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Poured Memories, LLC - Bartending Services</title>
+        <title>Poured Memories, LLC</title>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
             :root {
                 --color1: #AD8330;
                 --color2: #3E3D3D;
-                --color3: #E7CBBC;
             }
 
             .accent {
@@ -20,11 +19,12 @@
                 padding: 0;
                 font-family: "italiana", system-ui;
                 font-weight: bold;
-                background: white;
-                color: var(--color1);
             }
             
             .hero {
+                background-image: linear-gradient(rgba(230, 100, 0, 0.15)), url('https://images.squarespace-cdn.com/content/v1/6698834996b6057e16d61abc/d3ba16ed-298a-4e53-b30d-9a4ec1feaa07/IMG_4501.jpeg');
+                max-width: 100%;
+                height: 100vh;
                 background-size: cover;
                 background-position: 38% center;
                 background-repeat: no-repeat;
@@ -45,68 +45,17 @@
                 font-size: 48pt;
             }
 
-            h2 {
-                font-size: 32pt;
-            }
-
-            h3 {
-                font-size: 18pt;
-                margin: 10px auto;
-            }
-
-            form {
-                margin: auto 30px;
-                max-width: 350px;
-            }
-
-            input, textarea {
-                border-radius: 20px;
-                border-color: var(--color1);
-                font-size: 16pt;
-                padding: 5px;
-            }
-
-            .group {
-                display: flex;
-                flex-direction: column-reverse;
-                margin: auto 10px;
-            }
-
-            .group button {
-                width: 100px;
-                height: 50px;
-                margin: 30px 0px;
-                background: none;
-                color: var(--color1);
-                border-radius: 10px;
-                border-color: var(--color1);
-            }
-
-            .name input {
-                max-width: 140px;
-            }
-
-            .name {
-                display: flex;
-                width: 100%;
-                justify-content: space-between;
-            }
-
             .footer {
-                background: white;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: 30px auto;
             }
 
             .footer p {
                 margin: 0px auto;
                 font-size: 10pt;
                 color: var(--color1);
-            }
-
-            .foot-wrapper {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                padding: 30px;
             }
 
             .navi {
@@ -123,12 +72,12 @@
             }
 
             .navi label {
-                filter: invert(0);
+                filter: invert(1);
                 z-index: 1000;
             }
 
             .navi input:checked ~ label {
-                filter: invert(1);
+                filter: invert(0);
             }
 
             .navi input:checked ~ .mobile-droplist {
@@ -141,14 +90,14 @@
             
             .navi h1 {
                 margin: 0px;
-                color: var(--color1);
+                color: white;
                 font-size: 16pt;
                 z-index: 1000;
             }
 
             .mobile-droplist {
                 position: absolute;
-                background: var(--color3); 
+                background: #E7CBBC; 
                 height: 100vh;
                 width: 100vw;
                 display: none;
@@ -179,29 +128,16 @@
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
-                max-width: 400px;
-                margin: auto 30px;
             }
 
-            .wrapper img {
-                width: 100%;
-                margin: 15px auto;
-                border-radius: 30px;
+            .text {
+                max-width: 700px;
+                font-size: 12pt;
+                margin: auto 30px;
+                color: var(--color2);
             }
 
             @media (min-width: 800px) {
-                .core {
-                    display: flex;
-                    width: 100%;
-
-                    justify-content: center;
-                }
-                
-                .footer {
-                    position: absolute;
-                    bottom: 0;
-                    width: 100%;
-                }
                 .navi {
                     flex-direction: row;
                     align-items: center;
@@ -237,16 +173,8 @@
                     font-size: 16pt;
                 }
 
-                .wrapper {
-                    flex-direction: column;
-                    justify-content: center;
-                    max-width: none;
-                }
-    
-                .wrapper img {
-                    max-height: 200px;
-                    width: auto;
-                    border-radius: 30px;
+                .text {
+                    font-size: 16pt;
                 }
 
             }
@@ -263,60 +191,30 @@
                 <div class="mobile-droplist">
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/about/">About</a></li>
+                        <li><a href="/about/"  style="text-decoration: underline;"">About</a></li>
                         <li><a href="/services/">Services</a></li>
-                        <li><a href="/contact/" style="text-decoration: underline;"">Contact</a></li>
+                        <li><a href="/contact/">Contact</a></li>
                         <li><a href="/gallery/">Gallery</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="core">
-            <div class="wrapper">
-                <h2>CONTACT US</h2>
-                <h3>DON'T SEE WHAT YOU'RE LOOKING FOR?</h3>
-                <h3>NO WORRIES!</h3>
-                <h3>LET'S WORK ON IT TOGETHER!</h3>
+            <div class="content">
+                <h2>ABOUT</h2>
             </div>
-            <form>
-                <p style="padding-left: 10px;">Name</p>
-                <div class="name">
-                    <div class="group">
-                        <input id="first-name" type="text" required/>
-                        <label for"first-name">First Name (required)</label>
-                    </div>
-                    <div class="group">
-                        <input id="last-name" type="text" required/>
-                        <label for"last-name">Last Name (required)</label>
-                    </div>
-                </div>
-                <div class="group">
-                    <input id="mail" type="email" required/>
-                    <label for"mail">Email (required)</label>
-                </div>
-                <div class="group">
-                    <input type="tel" id="phone" name="phone" class="glass"  pattern="^\+?[0-9\s\-\(\)]{7,16}$" required/>
-                    <label for"phone">Phone Number (required)</label>
-                </div>
-                <div class="group">
-                    <input id="num" type="num" />
-                    <label for"num">Number of Guests</label>
-                </div>
-                <p style="padding-left: 10px;">Message (required)</p>
-                <div class="group">
-    		      <textarea class="glass" id="comments" name="comments" row="5" column="33" style="padding: 30px"></textarea>
-                </div>
-                <div class="group">
-                    <a href=""/contact/><button>Send</button></a>
-                </div>
-            </form>
+        </div>
+        <div class="wrapper">
+            <div class="text">
+                <p>Hello! My name is La Vonne but call me LV!</p>
+                <p>I am an accomplished hospitality professional with over a decade of experience, specializing in delivering exceptional service and innovative solutions in the industry. Over the course of my career, I have developed extensive expertise in hospitality management and operations, with a focus on creating memorable guest experiences.</p>
+                <p>As the owner of a mobile bar business, my mission is to craft elevated, personalized experiences that delight and engage my clients, ensuring each event is truly unique and unforgettable.</p>
+                <p>Now serving: LA, OC, SGV, and SFV.</p>
+                <p class="accent">WE pour the drinks, YOU make the memories</p>
+            </div>
         </div>
         <div class="footer">
-            <div class="foot-wrapper">
-                <p>LA | OC | SGV | SFV </p>
-                <p>pouredmemories@gmail.com</p>
-                <p>626.628.4881</p>
-            </div>
+            <p>LA | OC | SGV | SFV </p>
+            <p>pouredmemories@gmail.com</p>
+            <p>626.628.4881</p>
         </div>
     </body>
 </html>
