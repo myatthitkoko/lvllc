@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Poured Memories, LLC - Bartending Services</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+            :root {
+                --color1: #AD8330;
+                --color2: #3E3D3D;
+                --color3: #E7CBBC;
+            }
+
+            .accent {
+                color: var(--color1)
+            }
+            
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: "italiana", system-ui;
+                font-weight: bold;
+                background: var(--color3);
+            }
+            
+            .hero {
+                background-size: cover;
+                background-position: 38% center;
+                background-repeat: no-repeat;
+                display: flex;
+            }
+
+            .content {
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .content h2 {
+                color: white;
+                font-size: 48pt;
+            }
+
+            .footer {
+                background: white;
+            }
+
+            .footer p {
+                margin: 0px auto;
+                font-size: 10pt;
+                color: var(--color1);
+            }
+
+            .foot-wrapper {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 30px;
+            }
+
+            .navi {
+                padding: 30px;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                max-height: 100px;
+            }
+
+            .navi input {
+                display: none;
+            }
+
+            .navi label {
+                filter: invert(1);
+                z-index: 1000;
+            }
+
+            .navi input:checked ~ label {
+                filter: invert(0);
+            }
+
+            .navi input:checked ~ .mobile-droplist {
+                display: flex;
+            }
+
+            .navi input:checked ~ h1 {
+                color: black;
+            }
+            
+            .navi h1 {
+                margin: 0px;
+                color: var(--color1);
+                font-size: 16pt;
+                z-index: 1000;
+            }
+
+            .mobile-droplist {
+                position: absolute;
+                background: var(--color3); 
+                height: 100vh;
+                width: 100vw;
+                display: none;
+                z-index: 1;
+                margin: -30px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .mobile-droplist ul {
+                padding: 0;
+                list-style: none;
+            }
+
+            .mobile-droplist li {
+                margin: 30px auto;
+                font-size: 24pt;
+                text-align: center;
+            }
+
+            .mobile-droplist a {
+                color: var(--color2);
+                text-decoration: none;
+            }
+
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                max-width: 400px;
+                margin: auto 30px;
+            }
+
+            .wrapper img {
+                width: 100%;
+                margin: 15px auto;
+                border-radius: 30px;
+            }
+
+            @media (min-width: 800px) {
+                .footer {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                }
+                .navi {
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 0 30px;
+                }
+
+                .navi h1 {
+                    font-size: 24pt;
+                    min-width: 300px;
+                }
+                
+                .navi label {
+                    display: none;
+                }
+
+                .mobile-droplist {
+                    display: flex;
+                    justify-content: left;
+                    position: relative;
+                    background: none;
+                    width: 100%;
+                    height: auto;
+                    margin-left: 30px;
+                    padding: 0px;
+                }
+
+                .mobile-droplist ul {
+                    display: flex;
+                    gap: 30px;
+                }
+
+                .mobile-droplist li {
+                    font-size: 16pt;
+                }
+
+                .wrapper {
+                    flex-direction: row;
+                    justify-content: center;
+                    max-width: none;
+                }
+    
+                .wrapper img {
+                    max-height: 200px;
+                    width: auto;
+                    border-radius: 30px;
+                }
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="hero">
+            <div class="navi">
+                <input type="checkbox" id="toggle">
+                <label for="toggle">
+                    <img src="https://img.icons8.com/material-outlined/24/menu--v3.png" alt="toggle icon">
+                </label>
+                <h1>POURED MEMORIES</h1>
+                <div class="mobile-droplist">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="/gallery/" style="text-decoration: underline;">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <img src="https://images.squarespace-cdn.com/content/v1/6698834996b6057e16d61abc/937605a2-aa9b-4367-a449-a2959a614b34/IMG_0180.jpeg">
+            <img src="https://images.squarespace-cdn.com/content/v1/6698834996b6057e16d61abc/bc6f849c-e90d-4919-a347-d2756c263187/IMG_9610.jpeg">
+            <img src="https://images.squarespace-cdn.com/content/v1/6698834996b6057e16d61abc/4fa5449c-5375-4b3f-a910-db64dc5c7337/IMG_4385.jpeg">
+            <img src="https://images.squarespace-cdn.com/content/v1/6698834996b6057e16d61abc/63f026f3-6c38-4794-894d-034043ef649a/F9858FDB-9665-435D-A0BA-2C46164BF0B2.jpeg">
+        </div>
+        <div class="footer">
+            <div class="foot-wrapper">
+                <p>LA | OC | SGV | SFV </p>
+                <p>pouredmemories@gmail.com</p>
+                <p>626.628.4881</p>
+            </div>
+        </div>
+    </body>
+</html>
