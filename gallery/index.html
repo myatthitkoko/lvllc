@@ -2,21 +2,27 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="format-detection" content="telephone=no">
         <title>Poured Memories, LLC - Bartending Services</title>
         <style>
-            * {
-                box-sizing: border-box;
-            }
-            
             @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
             :root {
                 --color1: #AD8330;
                 --color2: #3E3D3D;
                 --color3: #E7CBBC;
+                --color4: #C5A86E;
             }
 
             .accent {
-                color: var(--color1)
+                color: var(--color1);
+            }
+
+            .accent2 {
+                color: var(--color4);
+            }
+
+            p {
+                font-size: 16pt;
             }
             
             body {
@@ -24,7 +30,8 @@
                 padding: 0;
                 font-family: "italiana", system-ui;
                 font-weight: bold;
-                background: var(--color3);
+                background: white;
+                color: var(--color1);
             }
             
             .hero {
@@ -46,6 +53,69 @@
             .content h2 {
                 color: white;
                 font-size: 48pt;
+            }
+
+            h2 {
+                font-size: 32pt;
+            }
+
+            h3 {
+                font-size: 18pt;
+                margin: 10px auto;
+            }
+
+            .core {
+                max-width: 380px;
+            }
+
+            .core-wrapper {
+                display: flex;
+                justify-content: center;
+            }
+
+            input, textarea, select {
+                border-radius: 20px;
+                border-color: var(--color1);
+                color: var(--color1);
+                font-size: 16pt;
+                padding: 5px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            textarea {
+                padding: 15px;
+            }
+
+            #day {
+                width: 200px;
+                color: var(--color1);
+            }
+
+            .group {
+                display: flex;
+                flex-direction: column-reverse;
+                margin: 15px auto;
+            }
+
+            .group button {
+                width: 100px;
+                height: 50px;
+                margin: 30px 0px;
+                background: none;
+                color: var(--color1);
+                border-radius: 10px;
+                border-color: var(--color1);
+            }
+
+            .name {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .name .group {
+                margin: 0px;
             }
 
             .footer {
@@ -79,12 +149,12 @@
             }
 
             .navi label {
-                filter: invert(1);
+                filter: invert(0);
                 z-index: 1000;
             }
 
             .navi input:checked ~ label {
-                filter: invert(0);
+                filter: invert(1);
             }
 
             .navi input:checked ~ .mobile-droplist {
@@ -132,26 +202,28 @@
 
             .wrapper {
                 display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                max-width: 400px;
-                margin: 0 auto;
-                padding: 0 30px;
+                justify-content: center;
             }
 
-            .wrapper img {
-                width: 100%;
-                margin: 15px auto;
-                border-radius: 30px;
+            .headings {
+                display: flex;
+                flex-direction: column;
+                max-width: 250px;
+                align-items: center;
+                text-align: center;   
             }
 
             @media (min-width: 800px) {
-                .footer {
-                    position: absolute;
-                    bottom: 0;
-                    width: 100%;
+                .core {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    max-width: none;
                 }
+
+                .headings {
+                    max-width: none;
+                }
+                
                 .navi {
                     flex-direction: row;
                     align-items: center;
@@ -188,9 +260,10 @@
                 }
 
                 .wrapper {
-                    flex-direction: row;
+                    flex-direction: column;
                     justify-content: center;
                     max-width: none;
+                    width: 100%;
                 }
     
                 .wrapper img {
@@ -212,20 +285,72 @@
                 <h1>POURED MEMORIES</h1>
                 <div class="mobile-droplist">
                     <ul>
-                        <li><a href="/lvllc/">Home</a></li>
-                        <li><a href="/lvllc/about/">About</a></li>
-                        <li><a href="/lvllc/services/">Services</a></li>
-                        <li><a href="/lvllc/contact/">Contact</a></li>
-                        <li><a href="/lvllc/gallery/" style="text-decoration: underline;">Gallery</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <li><a href="/contact/" style="text-decoration: underline;"">Contact</a></li>
+                        <li><a href="/gallery/">Gallery</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="wrapper">
-            <img src="https://images.squarespace-cdn.com/content/v1/6698834996b6057e16d61abc/937605a2-aa9b-4367-a449-a2959a614b34/IMG_0180.jpeg">
-            <img src="https://images.squarespace-cdn.com/content/v1/6698834996b6057e16d61abc/bc6f849c-e90d-4919-a347-d2756c263187/IMG_9610.jpeg">
-            <img src="https://images.squarespace-cdn.com/content/v1/6698834996b6057e16d61abc/4fa5449c-5375-4b3f-a910-db64dc5c7337/IMG_4385.jpeg">
-            <img src="https://images.squarespace-cdn.com/content/v1/6698834996b6057e16d61abc/63f026f3-6c38-4794-894d-034043ef649a/F9858FDB-9665-435D-A0BA-2C46164BF0B2.jpeg">
+        <div class="core-wrapper">
+            <div class="core">
+                <div class="wrapper">
+                    <div class="headings">
+                        <h2>CONTACT US</h2>
+                        <h3>DON'T SEE WHAT YOU'RE LOOKING FOR?</h3>
+                        <h3>NO WORRIES!</h3>
+                        <h3>LET'S WORK ON IT TOGETHER!</h3>
+                    </div>
+                </div>
+                <form>
+                    <p>Name</p>
+                    <div class="name">
+                        <div class="group">
+                            <input id="first-name" type="text" required/>
+                            <label for="first-name">First Name <span class="accent2">(required)</span></label>
+                        </div>
+                        <div class="group">
+                            <input id="last-name" type="text" required/>
+                            <label for="last-name">Last Name <span class="accent2">(required)</span></label>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <input id="mail" type="email" required/>
+                        <label for="mail">Email <span class="accent2">(required)</span></label>
+                    </div>
+                    <div class="group">
+                        <input type="tel" id="phone" name="phone" class="glass"  pattern="^\+?[0-9\s\-\(\)]{7,16}$" required/>
+                        <label for="phone">Phone Number <span class="accent2">(required)</span></label>
+                    </div>
+                    <div class="group">
+                        <input id="day" type="date" />
+                        <label for="day">Date of Event</label>
+                    </div>
+                    <div class="group">
+                        <input id="num" type="number" />
+                        <label for="num">Number of Guests</label>
+                    </div>
+                    <p>Message <span class="accent2">(required)</span></p>
+                    <div class="group">
+        		      <textarea class="glass" id="comments" name="comments" rows="3" col="33"></textarea>
+                    </div>
+                    <p>Service/Package</p>
+                    <label for="package"><span class="accent2">What service are you looking for?</span></label>
+                    <select id="package">
+                        <option value="" disabled selected hidden>Select an option</option>
+                        <option value="silver">Silver Package</option>
+                        <option value="gold">Gold Package</option>
+                        <option value="platinum">Platinum Package</option>
+                        <option value="other">Other/Custom/Not Sure</option>
+                        
+                    </select>
+                    <div class="group">
+                        <button>Send</button>
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="footer">
             <div class="foot-wrapper">
