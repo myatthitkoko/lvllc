@@ -11,10 +11,6 @@
                 --color3: #E7CBBC;
             }
 
-            * {
-                outline: 1px solid red;
-            }
-
             .accent {
                 color: var(--color1)
             }
@@ -60,11 +56,11 @@
 
             .core {
                 max-width: 400px;
-                margin: auto 30px;
             }
 
-            form {
-                
+            .core-wrapper {
+                display: flex;
+                justify-content: center;
             }
 
             input, textarea {
@@ -277,45 +273,47 @@
                 </div>
             </div>
         </div>
-        <div class="core">
-            <div class="wrapper">
-                <h2>CONTACT US</h2>
-                <h3>DON'T SEE WHAT YOU'RE LOOKING FOR?</h3>
-                <h3>NO WORRIES!</h3>
-                <h3>LET'S WORK ON IT TOGETHER!</h3>
+        <div class="core-wrapper">
+            <div class="core">
+                <div class="wrapper">
+                    <h2>CONTACT US</h2>
+                    <h3>DON'T SEE WHAT YOU'RE LOOKING FOR?</h3>
+                    <h3>NO WORRIES!</h3>
+                    <h3>LET'S WORK ON IT TOGETHER!</h3>
+                </div>
+                <form>
+                    <p style="padding-left: 10px;">Name</p>
+                    <div class="name">
+                        <div class="group">
+                            <input id="first-name" type="text" required/>
+                            <label for"first-name">First Name (required)</label>
+                        </div>
+                        <div class="group">
+                            <input id="last-name" type="text" required/>
+                            <label for"last-name">Last Name (required)</label>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <input id="mail" type="email" required/>
+                        <label for"mail">Email (required)</label>
+                    </div>
+                    <div class="group">
+                        <input type="tel" id="phone" name="phone" class="glass"  pattern="^\+?[0-9\s\-\(\)]{7,16}$" required/>
+                        <label for"phone">Phone Number (required)</label>
+                    </div>
+                    <div class="group">
+                        <input id="num" type="num" />
+                        <label for"num">Number of Guests</label>
+                    </div>
+                    <p style="padding-left: 10px;">Message (required)</p>
+                    <div class="group">
+        		      <textarea class="glass" id="comments" name="comments" row="5" column="33" style="padding: 30px"></textarea>
+                    </div>
+                    <div class="group">
+                        <button>Send</button>
+                    </div>
+                </form>
             </div>
-            <form>
-                <p style="padding-left: 10px;">Name</p>
-                <div class="name">
-                    <div class="group">
-                        <input id="first-name" type="text" required/>
-                        <label for"first-name">First Name (required)</label>
-                    </div>
-                    <div class="group">
-                        <input id="last-name" type="text" required/>
-                        <label for"last-name">Last Name (required)</label>
-                    </div>
-                </div>
-                <div class="group">
-                    <input id="mail" type="email" required/>
-                    <label for"mail">Email (required)</label>
-                </div>
-                <div class="group">
-                    <input type="tel" id="phone" name="phone" class="glass"  pattern="^\+?[0-9\s\-\(\)]{7,16}$" required/>
-                    <label for"phone">Phone Number (required)</label>
-                </div>
-                <div class="group">
-                    <input id="num" type="num" />
-                    <label for"num">Number of Guests</label>
-                </div>
-                <p style="padding-left: 10px;">Message (required)</p>
-                <div class="group">
-    		      <textarea class="glass" id="comments" name="comments" row="5" column="33" style="padding: 30px"></textarea>
-                </div>
-                <div class="group">
-                    <button>Send</button>
-                </div>
-            </form>
         </div>
         <div class="footer">
             <div class="foot-wrapper">
