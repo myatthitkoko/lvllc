@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Poured Memories, LLC</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+            :root {
+                --color1: #AD8330;
+                --color2: #3E3D3D;
+            }
+
+            .accent {
+                color: var(--color1)
+            }
+
+            li {
+                list-style: none;
+                margin: 10px auto;
+            }
+
+            ul {
+                padding: 0;
+            }
+            
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: "italiana", system-ui;
+                font-weight: bold;
+            }
+            
+            .hero {
+                background-image: linear-gradient(rgba(230, 100, 0, 0.15)), url('https://images.squarespace-cdn.com/content/v1/6698834996b6057e16d61abc/30e808c1-f178-45ee-b227-6ae4aa8411fb/IMG_4517.jpeg');
+                max-width: 100%;
+                height: 100vh;
+                background-size: cover;
+                background-position:  center;
+                background-repeat: no-repeat;
+                display: flex;
+            }
+
+            .content {
+                position: absolute;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .content h2 {
+                color: white;
+                font-size: 48pt;
+            }
+
+            .footer {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                margin: 30px auto;
+            }
+
+            .footer p {
+                margin: 0px auto;
+                font-size: 10pt;
+                color: var(--color1);
+            }
+
+            h2 {
+                text-align: center;
+                width: 100%;
+                font-size: 32pt;
+                color: var(--color1);
+            }
+
+            .navi {
+                padding: 30px;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                max-height: 100px;
+            }
+
+            .navi input {
+                display: none;
+            }
+
+            .navi label {
+                filter: invert(1);
+                z-index: 1000;
+            }
+
+            .navi input:checked ~ label {
+                filter: invert(0);
+            }
+
+            .navi input:checked ~ .mobile-droplist {
+                display: flex;
+            }
+
+            .navi input:checked ~ h1 {
+                color: black;
+            }
+            
+            .navi h1 {
+                margin: 0px;
+                color: white;
+                font-size: 16pt;
+                z-index: 1000;
+            }
+
+            .mobile-droplist {
+                position: absolute;
+                background: #E7CBBC; 
+                height: 100vh;
+                width: 100vw;
+                display: none;
+                z-index: 1;
+                margin: -30px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .mobile-droplist ul {
+                padding: 0;
+                list-style: none;
+            }
+
+            .mobile-droplist li {
+                margin: 30px auto;
+                font-size: 24pt;
+                text-align: center;
+            }
+
+            .mobile-droplist a {
+                color: var(--color2);
+                text-decoration: none;
+            }
+
+            .wrapper {
+                display: flex;
+                justify-content: center;
+            }
+
+            .bordered {
+                text-align: center;
+                border: brown solid 1px;
+                border-radius: 20px;
+                min-width: 300px;
+                padding: 30px;
+                margin: 30px;
+                color: var(--color2);
+            }
+
+            .package-details {
+                text-align: center;
+            }
+
+            .package-wrapper img {
+                width: 100%;
+                height: 300px; 
+                object-fit: cover;
+            }
+
+            .package-wrapper {
+                margin: 100px 20px;
+            }
+
+            hr {
+                height: 3px;
+                background: var(--color1);
+            }
+
+            button {
+                background: none;
+                border-color: var(--color1);
+                border-radius: 15px;
+                color: var(--color1);
+                height: 50px;
+                width: 100px;
+            }
+
+            .button-wrapper {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 100px;
+            }
+
+            @media (min-width: 800px) {
+                .packages {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                }
+                
+                .navi {
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 0 30px;
+                }
+
+                .navi h1 {
+                    font-size: 24pt;
+                    min-width: 300px;
+                }
+                
+                .navi label {
+                    display: none;
+                }
+
+                .mobile-droplist {
+                    display: flex;
+                    justify-content: left;
+                    position: relative;
+                    background: none;
+                    width: 100%;
+                    height: auto;
+                    margin-left: 30px;
+                    padding: 0px;
+                }
+
+                .mobile-droplist ul {
+                    display: flex;
+                    gap: 30px;
+                }
+
+                .mobile-droplist li {
+                    font-size: 16pt;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="hero">
+            <div class="navi">
+                <input type="checkbox" id="toggle">
+                <label for="toggle">
+                    <img src="https://img.icons8.com/material-outlined/24/menu--v3.png" alt="toggle icon">
+                </label>
+                <h1>POURED MEMORIES</h1>
+                <div class="mobile-droplist">
+                    <ul>
+                        <li><a href="/lvllc/">Home</a></li>
+                        <li><a href="/lvllc/about/">About</a></li>
+                        <li><a href="/lvllc/services/" style="text-decoration: underline;">Services</a></li>
+                        <li><a href="/lvllc/contact/">Contact</a></li>
+                        <li><a href="/lvllc/gallery/">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <h2>SERVICES</h2>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="bordered">
+                <h3 class="accent">WHAT'S INCLUDED?</h3>
+                <h3 style="text-decoration: underline;"><i>**CA is a dry hire state meaning clients MUST purchase and provide the alcohol.</i></h3>
+                <h3 class="accent">ALL packages will include:</h3>
+                <ul>
+                    <li>set up/clean up</li>
+                    <li>insurance</li>
+                    <li>ice</li>
+                    <li>premium disposable cups</li>
+                    <li>straws</li>
+                    <li>decor & bar equipment</li>
+                    <li>mixers (freshly squeezed or premium juices & sodas)</li>
+                    <li>garnishes</li>
+                </ul>
+            </div>
+        </div>
+        <h2>OUR PACKAGES</h2>
+        <div class="packages">
+            <div class="package-wrapper">
+                <img src="https://images.squarespace-cdn.com/content/v1/6698834996b6057e16d61abc/1730774424617-AEQCT90C7DEZTJ1XBKMH/unsplash-image-dmkmrNptMpw.jpg">
+                <div class="package-details">
+                    <h3 class="accent">SILVER</h3>
+                    <ul>
+                        <li>up to 75 guests</li>
+                        <li>2 bartenders</li>
+                        <li>2-4 beer choices (canned or bottled only)</li>
+                        <li>1 custom signature cocktail</li>
+                        <li>4 hours of service</li>
+                    </ul>
+                    <h3 style="text-decoration: underline;">STARTING AT $1200</h3>
+                </div>
+            </div>
+            <div class="package-wrapper">
+                <img src="https://images.squarespace-cdn.com/content/v1/6698834996b6057e16d61abc/1730774737831-52Y8CF6NL4VSK3A6ITAO/unsplash-image-kP8QyKwd1r0.jpg">
+                <div class="package-details">
+                    <h3 class="accent">GOLD</h3>
+                    <ul>
+                        <li>up to 100 guests</li>
+                        <li>2 bartenders</li>
+                        <li>2-4 beer choices (canned or bottled only)</li>
+                        <li>2-4 wine choices</li>
+                        <li>2 custom signature cocktails</li>
+                        <li>4 hours of service</li>
+                    </ul>
+                    <h3 style="text-decoration: underline;">STARTING AT $1600</h3>
+                </div>
+            </div>
+            <div class="package-wrapper">
+                <img src="https://images.squarespace-cdn.com/content/v1/6698834996b6057e16d61abc/1730774780084-2N0GR2SKA43SZGV9UKX9/unsplash-image-sSnCZlEWN5E.jpg">
+                <div class="package-details">
+                    <h3 class="accent">PLATINUM</h3>
+                    <ul>
+                        <li>up to 150 guests</li>
+                        <li>3 bartenders</li>
+                        <li>2-4 beer choices (canned or bottled only)</li>
+                        <li>2-4 wine choices</li>
+                        <li>3 custom signature cocktails</li>
+                        <li>4 hours of service</li>
+                    </ul>
+                    <h3 style="text-decoration: underline;">STARTING AT $2000</h3>
+                </div>
+            </div>
+            <div class="package-wrapper">
+                <img src="https://images.squarespace-cdn.com/content/v1/6698834996b6057e16d61abc/1730774861151-V8RPEPNI7WUVCXAIQGT3/unsplash-image-IRzq8sDxb7w.jpg">
+                <div class="package-details">
+                    <h3 class="accent">SPECIALTIES</h3>
+                    <ul>
+                        <li>Mimosa</li>
+                        <li>Champagne</li>
+                        <li>Mocktails</li>
+                        <li>Champagne/Treat Wall</li>
+                        <li>Bartending Services Only</li>
+                    </ul>
+                    <h3 style="text-decoration: underline;">CUSTOM PRICING</h3>
+                </div>
+            </div>
+            <div class="package-wrapper">
+                <img src="https://images.squarespace-cdn.com/content/v1/6698834996b6057e16d61abc/1730774945566-L064YOH3UG38YCH48JIT/unsplash-image-JjGLEN7T8xI.jpg">
+                <div class="package-details">
+                    <h3 class="accent">ADD ONS</h3>
+                    <ul>
+                        <li>every +50 guests</li>
+                        <li>Additional Signature Cocktail</li>
+                        <li>Additional Service Hour</li>
+                        <li>Additional Bartender</li>
+                        <li>N/A Beverages</li>
+                        <li>Travel Fee (after 20 mi from 91101)</li>
+                        <li>Self-serve Water Station</li>
+                        <li>Lemonade Station</li>
+                        <li>Drink Signage</li>
+                    </ul>
+                    <h3 style="text-decoration: underline;">PRICES MAY VARY</h3>
+                </div>
+            </div>
+            <div class="package-wrapper">
+                <img src="https://images.squarespace-cdn.com/content/v1/6698834996b6057e16d61abc/f0355de3-1feb-4f15-90f4-e65e0c38bed3/IMG_2614.jpeg">
+                <div class="package-details">
+                    <h3 class="accent">ARCH WALL RENTAL</h3>
+                    <ul>
+                        <li>$150/day</li>
+                        <li>for wall rental only + delivery depending on location</li>
+                        <li>$100/day</li>
+                        <li>as an add on to any mobile bartending service</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="button-wrapper">
+            <a href="/lvllc/contact/"><button>Book Now</button></a>
+        </div>
+        <hr>
+        <div class="footer">
+            <p>LA | OC | SGV | SFV </p>
+            <p>pouredmemories@gmail.com</p>
+            <p>626.628.4881</p>
+        </div>
+    </body>
+</html>
